@@ -1,0 +1,213 @@
+$backgroundColor : #9C27B0;
+$backgroundColorLight : #CF38C1;
+$hoverColor: #5A16A0;
+$textColor: #fff;
+
+$calBaseColor: black;
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $backgroundColor inset;
+    -webkit-text-fill-color: $textColor !important;
+}
+
+a {
+    color: blue;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
+
+.Message-Root {
+    background-color: black;
+    padding: 10px;
+    .Message-Title {
+        font-size:2em;
+    }
+    .Message-Body {
+        text-align: justify;
+    }
+}
+
+.Submit-Parent {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    &:after {
+        position:absolute;
+        line-height:50px;
+        right: 13px;
+        bottom: 5px;
+    }
+}
+
+.Submit-Loading:after {
+    content: "↻";
+    animation: spin 0.5s linear infinite;
+}
+
+.Submit-Ok:after{
+    right: 15px;
+    content: "✓";
+}
+
+.Submit-Error:after{
+    right:15px;
+    content: "⚠";
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+    
+
+.Input-Valid::before {
+    font-family: Arial, Helvetica, sans-serif;
+    content : "✓";
+}
+
+.Input-Invalid::before {
+    font-family: Arial, Helvetica, sans-serif;
+    content: "×";
+}
+
+span.Input-Invalid, span.Input-Valid {
+    position:absolute;
+    right:10px;
+    line-height:50px;
+}
+
+#content {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+.calendar-container {
+    background-color: $calBaseColor;
+    color: invert($calBaseColor);
+    width:100%;
+    height:250px;
+    font-weight:bold;
+    background: url("~static/gigelberghalle.jpg") center center;
+    .calendar-square {
+        position:absolute;
+        left: 0; right: 0;
+        margin: 0 auto;
+        height:250px;
+        width:250px;
+        .date {
+            text-align: center;
+            font-size: 10em;
+            break-after: always;
+            display: block;
+            font-family: Helvetica, sans-serif;
+            
+        }
+        .month {
+            text-align: center;
+            font-size: 1.25em;
+            break-after: always;
+            display: block;
+            margin-top:-30px;
+            letter-spacing: 5px;
+        }
+        .place {
+            display:block;
+            text-align:center;
+            letter-spacing: 2.5px;
+        }
+    }
+}
+
+
+body {
+  font-family: monospace, sans-serif;
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+
+header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+form {
+    input {
+        font-size: 1em;
+        width: 470px;
+        height: 50px;
+        padding: 0px 15px 0px 15px;
+        
+        background: transparent;
+        outline: none;
+        color: $textColor;
+        
+        border: solid 1px #b3aca7;
+        border-bottom: none;
+        
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+    }
+    input:enabled:hover {
+        background: $hoverColor;
+    }
+
+
+
+    input[type="number"] {
+        display: inline-block;
+        color: white;
+        width: 50px;
+        height: 40px;
+        margin: 5px 10px;
+        border: solid 1px #b3aca7;
+    }
+
+    .number {
+        border: solid 1px #b3aca7;
+        padding: 0 15px;
+        width:470px;
+    }
+
+    input[type="submit"] {
+        padding: 0;
+        font-size: 0.875em;
+
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+
+        outline:none;
+        cursor: pointer;
+        
+        border: solid 1px #b3aca7;
+
+        color: #b3aca7;
+        float: right;
+        width: 196px;
+        margin-top: 0px;
+        height: 65px;
+        margin-right: -2px;
+        margin-top: 5px;
+
+
+    }
+    input[type="submit"]:disabled {
+        color: #b3aca7;
+    }
+    input[type="submit"]:enabled {
+        color: $textColor;
+        background-color: $backgroundColorLight;
+    }
+}

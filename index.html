@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Taktinale</title>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Anmeldung</h1>
+            <h2>für die Taktinale der <a href="https://chorknaben-biberach.de">Chorknaben Biberach</a></h2>
+            <div class="calendar-container">
+                <div class="calendar-square">
+                    <span class="date">27</span>
+                    <span class="month">Mai, 18:00</span>
+                    <span class="place">
+                        <a target="_blank" href="https://www.google.de/maps/place/Gigelberghalle/@48.099839,9.7813177,17z/data=!3m1!4b1!4m5!3m4!1s0x479bc582fadcad9d:0xed74011872cb51ac!8m2!3d48.099839!4d9.7835064">Gigelberghalle</a>
+                    </span>
+                </div>
+            </div>
+            <div id="rootview"></div>
+        </div>
+
+        <!-- Dependencies -->
+        <script src="./node_modules/react/dist/react.js"></script>
+        <script src="./node_modules/react-dom/dist/react-dom.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <!-- Main -->
+        <script src="./dist/bundle.js"></script>
+    </body>
+</html>
